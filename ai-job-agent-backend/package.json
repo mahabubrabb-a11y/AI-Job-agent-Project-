@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/server.js",
   "scripts": {
-    "dev": "tsx watch server.ts",
+    "dev": "tsx watch src/server.js",
     "build": "tsc",
     "start": "node dist/server.js"
   },
@@ -35,7 +35,6 @@
     "@types/bcryptjs": "^2.4.6",
     "@types/cors": "^2.8.15",
     "@types/express": "^5.0.0",
-    "@types/ioredis": "^5.0.0",
     "@types/jsonwebtoken": "^9.0.8",
     "@types/morgan": "^1.9.9",
     "@types/multer": "^1.4.12",
