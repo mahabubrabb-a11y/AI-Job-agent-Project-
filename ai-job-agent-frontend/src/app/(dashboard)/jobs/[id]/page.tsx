@@ -1,19 +1,23 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, use } from 'react';
 import { AnalysisReport } from '../../../../components/jobs/AnalysisReport';
 import { JobAnalysisResult } from '../../../../types/analysis';
 import { api } from '../../../../lib/axios';
 import { Loader2 } from 'lucide-react';
 
-export default function SingleJobPage({ params }: { params: { id : string } }) {
+export default function SingleJobPage({ params }: { params: Promise<{ id: string }> }) {
+  // Next.js 15-এর প্রমিজ প্যারামিটার হ্যান্ডেল করার জন্য React.use() ব্যবহার করা হলো
+  const resolvedParams = use(params);
+  const id = resolvedParams.id;
+
   const [report, setReport] = useState<JobAnalysisResult | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     const fetchAnalysis = async () => {
       try {
-        const response = await api.get(`/analyze/${params.id}`);
+        const response = await api.get(`/analyze/${id}`);
         setReport(response.data.data);
       } catch (err) {
         console.error('Failed to load analysis report:', err);
@@ -22,8 +26,10 @@ export default function SingleJobPage({ params }: { params: { id : string } }) {
       }
     };
 
-    fetchAnalysis();
-  }, [params.id]);
+    if (id) {
+      fetchAnalysis();
+    }
+  }, [id]);
 
   if (loading) {
     return (
