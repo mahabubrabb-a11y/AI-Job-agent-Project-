@@ -29,7 +29,7 @@
     "node-cron": "^3.0.3",
     "openai": "^4.82.0",
     "pdf-parse-fork": "^1.2.0",
-    "stripe": "^17.6.0"
+    "stripe": "^22.5.0"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",
