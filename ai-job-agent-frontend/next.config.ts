@@ -1,7 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'standalone',
-  // স্ট্যাটিক জেনারেশন এরর চিরতরে বন্ধ করার জন্য এটি যুক্ত করা হলো:
+  // স্ট্যাটিক পেজ জেনারেশন বন্ধ করে সব ডাইনামিক পেজ সার্ভারে রান করার জন্য:
+  experimental: {
+    // কোনো এক্সপেরিমেন্টাল কনফিগ থাকলে তা রিমুভ করে এটি দিচ্ছি
+  },
   typescript: {
     ignoreBuildErrors: true,
   },
