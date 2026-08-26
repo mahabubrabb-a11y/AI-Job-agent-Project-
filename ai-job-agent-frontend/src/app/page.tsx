@@ -1,7 +1,7 @@
-export const dynamic = 'force-dynamic';
+
 
 'use client';
-
+export const dynamic = 'force-dynamic';
 import React from 'react';
 import Link from 'next/link';
 import { Navbar } from '../components/shared/Navbar';

@@ -1,7 +1,7 @@
-export const dynamic = 'force-dynamic';
+
 
 'use client';
-
+export const dynamic = 'force-dynamic';
 import { FileDropzone } from '../../../components/resume/FileDropzone';
 import { JobMatcher } from '../../../components/resume/JobMatcher';
 import { useUserStore } from '../../../store/useUserStore';
