@@ -1,0 +1,21 @@
+import type { Metadata } from 'next';
+import './globals.css';
+
+export const metadata: Metadata = {
+  title: 'AI Job Agent - Multi-Agent Resume & Mock Interview Accelerator',
+  description: 'AI powered job search, resume matching, and voice mock interview system.',
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <body className="antialiased bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+        {children}
+      </body>
+    </html>
+  );
+} 
