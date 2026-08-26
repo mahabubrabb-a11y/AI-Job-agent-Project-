@@ -5,11 +5,10 @@
     "moduleResolution": "node",
     "ignoreDeprecations": "6.0",
     "outDir": "./dist",
-    "rootDir": "./src",
     "types": ["node"],
     "esModuleInterop": true,
     "skipLibCheck": true,
     "strict": false
   },
-  "include": ["src/**/*"]
+  "include": ["src/**/*", "server.ts"]
 }
