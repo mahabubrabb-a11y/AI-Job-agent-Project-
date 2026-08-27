@@ -1,8 +1,6 @@
-
-
 import type { Metadata } from 'next';
 // @ts-ignore
-import './globals.css'
+import './globals.css';
 
 export const metadata: Metadata = {
   title: 'AI Job Agent - Multi-Agent Resume & Mock Interview Accelerator',
@@ -16,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="antialiased bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+      <body className="antialiased bg-[#080C14] text-gray-100">
         {children}
       </body>
     </html>
