@@ -1,10 +1,7 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: 'standalone',
-  // স্ট্যাটিক পেজ জেনারেশন বন্ধ করে সব ডাইনামিক পেজ সার্ভারে রান করার জন্য:
-  experimental: {
-    // কোনো এক্সপেরিমেন্টাল কনফিগ থাকলে তা রিমুভ করে এটি দিচ্ছি
-  },
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
+  // যদি কোনো output এক্সপোর্ট কনফিগারেশন থাকে তা বাদ দেওয়া হলো যাতে সার্ভার মোডে চলে
   typescript: {
     ignoreBuildErrors: true,
   },

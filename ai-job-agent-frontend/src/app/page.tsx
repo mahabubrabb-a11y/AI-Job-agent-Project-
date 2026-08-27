@@ -2,6 +2,8 @@
 
 'use client';
 export const dynamic = 'force-dynamic';
+export const fetchCache = 'force-no-store';
+
 import React from 'react';
 import Link from 'next/link';
 import { Navbar } from '../components/shared/Navbar';
